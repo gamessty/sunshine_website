@@ -344,8 +344,6 @@
               <script>
                 function mySubmitFunction() {
   var formElement = document.getElementById("newsletter_subscribe");
-                  console.log("Hi")
-                  alert("Hi")
 submitForm(formElement, function() {
     console.log("Form submitted");
 });
@@ -357,6 +355,8 @@ console.log("Worked")
 function submitForm(form, successFn){
     if (form.getAttribute("id")!='' || form.getAttribute("id")!=null){
         var id = form.getAttribute("id");
+        alert("Id = " + id)
+        alert("Seriliaze: " + $(id).serializeArray()) 
     } else {
         console.log("Form id attribute was not set; the form cannot be serialized");
     }
